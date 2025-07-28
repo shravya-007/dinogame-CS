@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height:50vh;
+            background-color: black;
+            border-radius: 20px;
+            overflow: hidden;
+            position:relative;
+        }
+        #road{
+            height:50px;
+            width:100%;
+            background-color:red;
+            position: absolute;
+            bottom: 0px;
+
+        }
+        #dino{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            bottom:50px;
+            left: 20px;
+            color: white;
+        }
+        #obs{
+            width: 20px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            bottom: 50px;
+            right: 20px;
+        }
+        .obs-move{
+            animation-name: moveright;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes moveright{
+            from{
+                right: 20px;
+            }
+            to{
+                right: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="dino">Dino</div>
+        <div id="obs" class="obs-move">OBS</div>
+        <div id="road">Road</div>
+    </div>
+</body>
+</html>
